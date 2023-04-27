@@ -1,90 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
+
+<!--     ___   ___ ___  ____             _                _  _ ___  
+        |__ \ / _ \__ \|___ \           | |              | || |__ \ 
+   ___     ) | | | | ) | __) | __      _| |__   ___  _ __| || |_ ) |
+ / __|    / /| | | |/ / |__ <  \ \ /\ / / '_ \ / _ \| '_ \__   _/ / 
+ | (__   / /_| |_| / /_ ___) |  \ V  V /| | | | (_) | |_) | | |/ /_ 
+ \___|  |____|\___/____|____/    \_/\_/ |_| |_|\___/| .__/  |_|____|
+                                                    | |             
+                 mit license                        |_|              
+ 
+Copyright © 2023 whop42
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this
+  software and associated documentation files (the “Software”), to deal in the Software
+  without restriction, including without limitation the rights to use, copy, modify,
+  merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to the following
+  conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies
+  or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/styles.css" rel="stylesheet">
     <title>whop42</title>
+
+    <!-- purecss -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+<nav>
+    <ul class="nav-options">
+        <a href="#" class="nav-title">whop42</a>
+        <li class="nav-option">
+            <a href="#about" class="">about</a>
+        </li>
+        <li class="nav-option">
+            <a href="#projects" class="">projects</a>
+        </li>
+        <li class="nav-option">
+            <a href="#" class="">contact</a>
+        </li>
+    </ul>
+</nav>
+</div>
 
-<body class="dark:bg-black text-white font-mono lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[10%]">
-    <div class="hero pt-16">
-        <h1 class="text-center text-3xl">i'm whop42</h1>
-        <h3 class="text-center text-xl">ヽ(°〇°)ﾉ</h3>
-        <p class="text-center">
-            <a class="text-purple-500 font-bold underline text-sm hover:text-purple-600 transition-colors" href="https://github.com/Whop42">[github]</a>
-            <a class="text-purple-500 font-bold underline text-sm hover:text-purple-600 transition-colors" href="mailto:whop42@icloud.com">[email]</a></p>
-    </div>
+<!-- big hero: ascii text art (reacts to mouse), with matrix ascii background slowly moving -->
+<span>
+    <div class="ascii-art">
+        <canvas id="scrolling-background"></canvas>
+        <pre class="ascii-title">
+        <div class="ascii-wrapper" id="ascii-hover">
+            <div class="blob"></div>
+               /%%                           /%%   /%%  /%%%%%% 
+              | %%                          | %%  | %% /%%__  %%
+ /%%  /%%  /%%| %%%%%%%   /%%%%%%   /%%%%%% | %%  | %%|__/  \ %%
+| %% | %% | %%| %%__  %% /%%__  %% /%%__  %%| %%%%%%%%  /%%%%%%/
+| %% | %% | %%| %%  \ %%| %%  \ %%| %%  \ %%|_____  %% /%%____/ 
+| %% | %% | %%| %%  | %%| %%  | %%| %%  | %%      | %%| %%      
+|  %%%%%/%%%%/| %%  | %%|  %%%%%%/| %%%%%%%/      | %%| %%%%%%%%
+ \_____/\___/ |__/  |__/ \______/ | %%____/       |__/|________/
+                                  | %%                          
+                                  | %%                          
+                                  |__/                          
+        </div>
+    </pre>
+    
+        <p id="tagline">student & <strong>linux nerd</strong></p>
 
-    <div class="grid gap-8 md:grid-cols-2 pt-16 m-5">
-        <div class="w-full p-5">
-            <h3 class="text-center text-xl text-purple-500 font-bold">skills</h3>
-            <ul class="">
-                <li>* linux</li>
-                <li>* python automation</li>
-                <li>* html/css/js</li>
-                <li>* tailwind</li>
-                <li>* node</li>
-                <li>* flask</li>
-                <li>* fabricmc</li>
-                <li>* java</li>
-                <li>* c/c++</li>
-            </ul>
-        </div>
-        <div class="w-full p-5">
-            <h3 class="text-center text-xl text-purple-500 font-bold">about</h3>
-            <p class="">i'm a high school student with a passion for tech, mostly software development and system administration.
-                i'm always open to learning anything new, and love to help people with their projects.
-                i speak english natively, am conversational in spanish, and can get by (just barely) in japanese, italian, and german.
-            </p>
-        </div>
     </div>
+</span>
 
-    <div class="pt-10 m-5">
-        <div class="w-full p-5">
-            <h3 class="text-center text-xl text-purple-500 font-bold">projects</h3>
-            <ul class="">
-                <li><a class="text-purple-500 font-bold underline hover:text-purple-600 transition-colors" href="https://github.com/whop42/LinuxConvert">[LinuxConvert]</a>: a streamlined system for migrating a windows/macOS user to linux (for CSRSEF)</li>
-                <li><a class="text-purple-500 font-bold underline hover:text-purple-600 transition-colors" href="https://github.com/whop42/whop42.github.io">[whop42.github.io]</a>: my website</li>
-                <li><a class="text-purple-500 font-bold underline hover:text-purple-600 transition-colors" href="https://github.com/whop42/autoschool">[autoschool]</a>: a program for automating school planning and basic tasks</li>
-            </ul>
-        </div>
-    </div>
-    <div class="pt-10 m-5">
-        <h3 class="text-center text-xl text-purple-500 font-bold">my setups</h3>
-        <div class="grid gap-8 md:grid-cols-2">
-            <div class="w-full p-5">
-                <h3 class="text-center">desktop</h3>
-                <ul class="">
-                    <li>* endeavourOS</li>
-                    <li>* KDE</li>
-                    <li>* i5-10400F @ 2.9-4.3ghz</li>
-                    <li>* gigabyte GTX 1070</li>
-                    <li>* 16gb DDR4-3000</li>
-                    <li>* 500gb SSD</li>
-                    <li>* corsair cx 500M</li>
-                    <li>* asus H410M-E</li>
-                    <li>* viewsonic 1440p 144hz</li>
-                    <li>* catppuccin theme</li>
+<!-- content -->
+<span id="content">
+    <div id="about" class="pure-g">
+        <div class="pure-u-1-4"></div>
+        <div class="pure-u-1-2">
+            <div class="content-container">
+                <h2><i class="comment">// </i>about me</h2>
+                <p>hi, i'm <strong>whop42</strong>!</p>
+                <p>
+                    i'm a high school student interested in computers.
+                    i've fallen in love with cybersecurity, linux, and progamming.
+                </p>
+                <p>
+                    most of my time is taken up by schoolwork during US school months,
+                    but I try to find some time for personal projects here and there.
+                </p>
+            </div>
+            <div class="content-container">
+                <h2><i class="comment">// </i>skills</h2>
+                <ul>
+                    <li><i class="comment">* </i>python scripting</li>
+                    <li><i class="comment">* </i>linux administration</li>
+                    <li><i class="comment">* </i>html/css/js (+ some react)</li>
+                    <li><i class="comment">* </i>competitive programming with Java</li>
+                    <li><i class="comment">* </i>minecraft mods with fabricMC</li>
+                    <li><i class="comment">* </i>fluent english, broken spanish</li>
                 </ul>
             </div>
-            <div class="w-full p-5">
-                <h3 class="text-center">laptop</h3>
-                <ul class="">
-                    <li>* endeavourOS</li>
-                    <li>* xfce</li>
-                    <li>* 2013 macbook air</li>
-                    <li>* 4gb RAM</li>
-                    <li>* i5 (dual core) @ 1.3ghz</li>
-                    <li>* 128gb</li>
-                    <li>* 1440x900</li>
-                    <li>* dracula theme</li>
-                </ul>
+            <div class="content-container">
+                
             </div>
         </div>
+        <div class="pure-u-1-4"></div>
     </div>
+    <div class="projects-container">
+            <h2><i class="comment" id="projects">// </i>projects</h2>
+                <div class="cards">
+                    <div class="project-card">
+                        <h3><a href="https://github.com/whop42/LinuxConvert">LinuxConvert</a></h3>
+                        <h5>2022-2023 | 2nd place in category at WSSEF</h5>
+                        <img src="public/lc.jpg" alt="LinuxConvert">
+                        <p>a program for migrating settings/applications from Windows to EndeavourOS with minimal user interaction</p>
+                    </div>
+                    <div class="project-card">
+                        <h3><a href="https://github.com/the-tetracontadigon/dent">Dent Client</a></h3>
+                        <h5>2020, 2022 | PoC Minecraft tool</h5>
+                        <img src="public/dent.jpg" alt="Dent Client">
+                        <p>unique method of injecting cheats into minecraft using a client-database system within the client</p>
+                    </div>
+                    <div class="project-card">
+                        <h3><a href="https://github.com/Whop42/shoeprint-analysis">shoeprint-analysis</a></h3>
+                        <h5>2022-2023 | best in class forensics project</h5>
+                        <img src="public/nas.jpg" alt="shoeprint-analysis">
+                        <p>first application to determine the flex of a shoeprint based on 3D models with a novel method of analysis (group project, I did the code)</p>
+                    </div>
+                </div>
+    </div>
+    <footer>
+        made with <i class="comment">&lt;3</i> and <a href="http://purecss.io">purecss</a> (hosted on <a href="http://github.com/whop42/whop42.github.io">github</a>)
+    </footer>
+</span>
+
+<!-- js -->
+<script src="colorChanger.js"></script>
+<script src="TextScramble.js"></script>
+<script src="matrix.js"></script>
+<script src="tagline.js"></script>
 </body>
 
 </html>
