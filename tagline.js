@@ -1,6 +1,6 @@
 let elems = document.getElementById("tagline").getElementsByTagName("strong");
 
-let choices = ["linux nerd", "programmer", "FOSS enthusiast"];
+let choices = ["programmer", "FOSS enthusiast", "linux nerd"];
 
 [...elems].forEach((elem) => {
     let currentChoiceIndex = 1;

@@ -32,8 +32,8 @@
   color: white;
 
   /* vars */
-  --accent-color: rgb(22, 94, 46);
-  --accent-color-darker: rgb(13, 49, 15);
+  --accent-color: #9227c4;
+  --accent-color-darker: #831fb1;
   --ascii-rotation: 10deg;
 
   font-family: monospace;
@@ -142,14 +142,13 @@ nav {
 
 .ascii-title {
   position: absolute;
-  
 }
 
 #scrolling-background {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 1fr;
+  height: 1fr;
 }
 
 .ascii-wrapper:hover .blob {
