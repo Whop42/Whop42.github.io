@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+       <!--     ___   ___ ___  ____             _                _  _ ___  
+               |__ \ / _ \__ \|___ \           | |              | || |__ \ 
+          ___     ) | | | | ) | __) | __      _| |__   ___  _ __| || |_ ) |
+        / __|    / /| | | |/ / |__ <  \ \ /\ / / '_ \ / _ \| '_ \__   _/ / 
+        | (__   / /_| |_| / /_ ___) |  \ V  V /| | | | (_) | |_) | | |/ /_ 
+        \___|  |____|\___/____|____/    \_/\_/ |_| |_|\___/| .__/  |_|____|
+                                                           | |             
+                         mit license below                 |_|    
+
+        Copyright © 2023 whop42
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this
+        software and associated documentation files (the “Software”), to deal in the Software
+        without restriction, including without limitation the rights to use, copy, modify,
+        merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to the following
+        conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies
+        or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+        INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+        PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>~/whop42/</title>
+
+        <!-- purecss used for normalization only -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/styles.css">
+    <meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:3000/">
+<meta name="twitter:card" content="summary">
+</head>
+    <body>
+        <nav>
+            <ul class="nav-options">
+                <a href="/" class="nav-title"><strong class="grey">~/</strong>whop42<strong class="grey">/</strong></a>
+                <li class="nav-option">
+                    <a href="/#about" class="">about</a>
+                </li>
+                <li class="nav-option">
+                    <a href="/#projects" class="">projects</a>
+                </li>
+                <li class="nav-option">
+                    <a href="/#blog" class="">blog</a>
+                </li>
+                <li class="nav-option">
+                    <a href="/#contact" class="">contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <canvas id="scrolling-background"></canvas>
+
+        
+<!-- big hero: ascii text art (reacts to mouse), with matrix ascii background slowly moving -->
+<canvas id="scrolling-background"></canvas>
+<span>
+    
+    <div class="ascii-art">
+        <div id="hoverme" style="transform: translateY(-4rem); font-size: 8pt;">psst: hover me</div>
+        <pre class="ascii-title">    <div class="ascii-wrapper" id="ascii-hover">
+        <div class="blob"></div>
+               /%%                           /%%   /%%  /%%%%%% 
+              | %%                          | %%  | %% /%%__  %%
+ /%%  /%%  /%%| %%%%%%%   /%%%%%%   /%%%%%% | %%  | %%|__/  \ %%
+| %% | %% | %%| %%__  %% /%%__  %% /%%__  %%| %%%%%%%%  /%%%%%%/
+| %% | %% | %%| %%  \ %%| %%  \ %%| %%  \ %%|_____  %% /%%____/ 
+| %% | %% | %%| %%  | %%| %%  | %%| %%  | %%      | %%| %%      
+|  %%%%%/%%%%/| %%  | %%|  %%%%%%/| %%%%%%%/      | %%| %%%%%%%%
+ \_____/\___/ |__/  |__/ \______/ | %%____/       |__/|________/
+                                  | %%                          
+                                  | %%                          
+                                  |__/                          
+    </div>
+</pre>
+
+        <p id="tagline">student &amp; <strong>developer</strong>
+        </p>
+
+    </div>
+</span>
+
+<!-- content -->
+<div id="content">
+    <div class="content">
+        <h2>
+            <i class="comment">// </i>about me</h2>
+        <p>hi, i'm <strong>whop42</strong>!</p>
+        <p>
+        i'm a student interested in computers (more specifically programming,
+        cybersecurity, linux, and open source)
+    </p>
+        <p>
+        most of my time is taken up by schoolwork (especially september-june),
+        but I try to find some time for projects here and there
+    </p>
+    </div>
+    <div class="content">
+        <h2>
+            <i class="comment">// </i>skills</h2>
+        <ul style="list-style: none;">
+            <li>
+                <i class="comment">* </i>python/golang scripting</li>
+            <li>
+                <i class="comment">* </i>linux administration</li>
+            <li>
+                <i class="comment">* </i>basic CTF/ethical hacking, learning more</li>
+            <li>
+                <i class="comment">* </i>html/css/js (+ react/preact/tailwind)</li>
+            <li>
+                <i class="comment">* </i>fullstack deno w/ ts</li>
+            <li>
+                <i class="comment">* </i>competitive programming with Java</li>
+            <li>
+                <i class="comment">* </i>minecraft mods with fabricMC/quilt</li>
+            <li>
+                <i class="comment">* </i>fluent english, broken spanish</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>
+            <i class="comment" id="projects">// </i>projects</h2>
+        <div>
+            <ul>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/whop42/LinuxConvert">LinuxConvert</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2022-present | 2nd place in category at WSSEF</h5>
+                    <p>a program for migrating settings/applications from Windows to Linux with minimal user interaction</p>
+                </li>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/the-tetracontadigon/dent">dent client</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2020, 2022 | proof-of-concept minecraft tool</h5>
+                    <p>unique method of injecting cheats into Minecraft using a client-database system within the client</p>
+                </li>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/Whop42/shoeprint-analysis">shoeprint-analysis</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2022-2023 | best in class forensics project</h5>
+                    <p>first application to determine the flex of a shoeprint based on scanned 3D models with a novel method of analysis (group project, I wrote the code)</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2><i class="comment" id="blog">// </i>blog posts</h2>
+
+        <div>
+            
+    <ul>
+      <li class="card">
+      <h3>
+          <a href="/posts/first-post/">first post!</a> <span class="grey">↴</span>
+      </h3>
+      <h5>Wed Jul 26 2023 17:00:00 GMT-0700 (Pacific Daylight Time)</h5>
+      <p>i needed a post to test the blog 🤷</p>
+    </li>
+    </ul>
+  
+        </div>
+    </div>
+
+    <div id="contact" class="content">
+        <div class="">
+            <div class="content-container">
+                <h2>
+                    <i class="comment">// </i>contact me</h2>
+                <p>
+                    <strong>
+                        <a href="mailto:whop42@icloud.com">email</a>
+                    </strong>-&gt; whop42 [at] icloud [dot] com</p>
+                <p>
+                    <strong>
+                        <a href="https://discordapp.com/users/667524862910267392">discord</a>
+                    </strong>-&gt; whop42</p>
+                <p>
+                    <strong>
+                        <a rel="me" href="https://tech.lgbt/@whop42">mastodon</a>
+                    </strong>-&gt; whop42@tech.lgbt</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+        <footer>
+            made with <a href="http://lume.land">lume</a>, (hosted on <a href="http://github.com/whop42/whop42.github.io">github</a>)
+        </footer>
+
+        <!-- js imports! don't touch! -->
+        <script src="/TextScramble.js"></script>
+        <script src="/matrix.js"></script>
+        <script src="/tagline.js"></script>
+    
+
+</body></html>

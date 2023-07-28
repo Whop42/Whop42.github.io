@@ -1,0 +1,135 @@
+---
+title: 
+---
+
+{% extends "template.njk" %}
+
+{% block content %}
+<!-- big hero: ascii text art (reacts to mouse), with matrix ascii background slowly moving -->
+<canvas id="scrolling-background"></canvas>
+<span>
+    
+    <div class="ascii-art">
+        <div id="hoverme" style="transform: translateY(-4rem); font-size: 8pt;">psst: hover me</div>
+        <pre class="ascii-title">
+    <div class="ascii-wrapper" id="ascii-hover">
+        <div class="blob"></div>
+               /%%                           /%%   /%%  /%%%%%% 
+              | %%                          | %%  | %% /%%__  %%
+ /%%  /%%  /%%| %%%%%%%   /%%%%%%   /%%%%%% | %%  | %%|__/  \ %%
+| %% | %% | %%| %%__  %% /%%__  %% /%%__  %%| %%%%%%%%  /%%%%%%/
+| %% | %% | %%| %%  \ %%| %%  \ %%| %%  \ %%|_____  %% /%%____/ 
+| %% | %% | %%| %%  | %%| %%  | %%| %%  | %%      | %%| %%      
+|  %%%%%/%%%%/| %%  | %%|  %%%%%%/| %%%%%%%/      | %%| %%%%%%%%
+ \_____/\___/ |__/  |__/ \______/ | %%____/       |__/|________/
+                                  | %%                          
+                                  | %%                          
+                                  |__/                          
+    </div>
+</pre>
+
+        <p id="tagline">student & <strong>developer</strong>
+        </p>
+
+    </div>
+</span>
+
+<!-- content -->
+<div id="content">
+    <div class="content">
+        <h2>
+            <i class="comment">// </i>about me</h2>
+        <p>hi, i'm <strong>whop42</strong>!</p>
+        <p>
+        i'm a student interested in computers (more specifically programming,
+        cybersecurity, linux, and open source)
+    </p>
+        <p>
+        most of my time is taken up by schoolwork (especially september-june),
+        but I try to find some time for projects here and there
+    </p>
+    </div>
+    <div class="content">
+        <h2>
+            <i class="comment">// </i>skills</h2>
+        <ul style="list-style: none;">
+            <li>
+                <i class="comment">* </i>python/golang scripting</li>
+            <li>
+                <i class="comment">* </i>linux administration</li>
+            <li>
+                <i class="comment">* </i>basic CTF/ethical hacking, learning more</li>
+            <li>
+                <i class="comment">* </i>html/css/js (+ react/preact/tailwind)</li>
+            <li>
+                <i class="comment">* </i>fullstack deno w/ ts</li>
+            <li>
+                <i class="comment">* </i>competitive programming with Java</li>
+            <li>
+                <i class="comment">* </i>minecraft mods with fabricMC/quilt</li>
+            <li>
+                <i class="comment">* </i>fluent english, broken spanish</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>
+            <i class="comment" id="projects">// </i>projects</h2>
+        <div>
+            <ul>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/whop42/LinuxConvert">LinuxConvert</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2022-present | 2nd place in category at WSSEF</h5>
+                    <p>a program for migrating settings/applications from Windows to Linux with minimal user interaction</p>
+                </li>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/the-tetracontadigon/dent">dent client</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2020, 2022 | proof-of-concept minecraft tool</h5>
+                    <p>unique method of injecting cheats into Minecraft using a client-database system within the client</p>
+                </li>
+                <li class="card">
+                    <h3>
+                        <a href="https://github.com/Whop42/shoeprint-analysis">shoeprint-analysis</a> <span class="grey">↴</span>
+                    </h3>
+                    <h5>2022-2023 | best in class forensics project</h5>
+                    <p>first application to determine the flex of a shoeprint based on scanned 3D models with a novel method of analysis (group project, I wrote the code)</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2><i class="comment" id="blog">// </i>blog posts</h2></h2>
+
+        <div>
+            {{ content | safe }}
+        </div>
+    </div>
+
+    <div id="contact" class="content">
+        <div class="">
+            <div class="content-container">
+                <h2>
+                    <i class="comment">// </i>contact me</h2>
+                <p>
+                    <strong>
+                        <a href="mailto:whop42@icloud.com">email</a>
+                    </strong>-> whop42 [at] icloud [dot] com</p>
+                <p>
+                    <strong>
+                        <a href="https://discordapp.com/users/667524862910267392">discord</a>
+                    </strong>-> whop42</p>
+                <p>
+                    <strong>
+                        <a rel="me" href="https://tech.lgbt/@whop42">mastodon</a>
+                    </strong>-> whop42@tech.lgbt</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
