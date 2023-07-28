@@ -1,6 +1,7 @@
 const elems = document.getElementById("tagline").getElementsByTagName("strong");
 const hoverme = document.getElementById("hoverme");
 
+let asciiWrapper = document.getElementById("ascii-hover");
 const choices = ["programmer", "linux nerd", "1337 h4x0r"];
 
 [...elems].forEach((elem) => {
@@ -18,6 +19,3 @@ const choices = ["programmer", "linux nerd", "1337 h4x0r"];
         }
     });
 })
-
-
-

@@ -161,11 +161,6 @@ nav {
     opacity: 0.2;
     filter: blur(50px);
 }
-
-.hoverme {
-    transition: opacity 1s ease-out;
-}
-
 /* HERO end */
 /* ========================================================= */
 /* CONTENT begin */

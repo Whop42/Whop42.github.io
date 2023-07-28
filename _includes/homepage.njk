@@ -10,7 +10,7 @@ title:
 <span>
     
     <div class="ascii-art">
-        <div id="hoverme" style="transform: translateY(-4rem); font-size: 8pt;">psst: hover me</div>
+        <div id="hoverme" style="transform: translateY(-4rem); font-size: 8pt;" class="grey">psst: hover me</div>
         <pre class="ascii-title">
     <div class="ascii-wrapper" id="ascii-hover">
         <div class="blob"></div>
@@ -131,5 +131,90 @@ title:
     </div>
 
 </div>
+
+<script>
+
+class TextScramble {
+  constructor(element) {
+    this.element = element;
+    this.characters = "10_____?";
+    this.update = this.update.bind(this);
+  }
+
+  setText(newText) {
+    const oldText = this.element.innerText;
+    const maxLength = Math.max(oldText.length, newText.length);
+    const promise = new Promise((resolve) => (this.resolve = resolve));
+    this.queue = [];
+    for (let i = 0; i < maxLength; i++) {
+      const fromCharacter = oldText[i] || "";
+      const toCharacter = newText[i] || "";
+      const startFrame = Math.floor(Math.random() * 40);
+      const endFrame = startFrame + Math.floor(Math.random() * 40);
+      this.queue.push({ fromCharacter, toCharacter, startFrame, endFrame });
+    }
+    cancelAnimationFrame(this.frameRequest);
+    this.frameCount = 0;
+    this.update();
+    return promise;
+  }
+
+  update() {
+    let outputText = "";
+    let completedCount = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { fromCharacter, toCharacter, startFrame, endFrame, char } =
+        this.queue[i];
+      if (this.frameCount >= endFrame) {
+        completedCount++;
+        outputText += toCharacter;
+      } else if (this.frameCount >= startFrame) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar();
+          this.queue[i].char = char;
+        }
+        outputText += `<span class="dud">${char}</span>`;
+      } else {
+        outputText += fromCharacter;
+      }
+    }
+    this.element.innerHTML = outputText;
+    if (completedCount === this.queue.length) {
+      this.resolve();
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update);
+      this.frameCount++;
+    }
+  }
+
+  randomChar() {
+    return this.characters[
+      Math.floor(Math.random() * this.characters.length)
+    ];
+  }
+}
+
+const elems = document.getElementById("tagline").getElementsByTagName("strong");
+const hoverme = document.getElementById("hoverme");
+var asciiWrapper = document.getElementById("ascii-hover");
+const choices = ["programmer", "linux nerd", "1337 h4x0r"];
+
+[...elems].forEach((elem) => {
+    let currentChoiceIndex = 1;
+
+    const scrambler = new TextScramble(elem);
+    
+    asciiWrapper.addEventListener("mouseenter", () => {
+        hoverme.style.opacity = 0.0;
+        scrambler.setText(choices[currentChoiceIndex]);
+        if(currentChoiceIndex == choices.length - 1) {
+            currentChoiceIndex = 0;
+        } else {
+            currentChoiceIndex++;
+        }
+    });
+})
+
+</script> 
 
 {% endblock %}

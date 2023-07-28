@@ -11,7 +11,7 @@ const columns = canvas.width/fontSize;
 
 const rainDrops = Array.from({ length: columns }).fill(canvas.height);
 
-const asciiWrapper = document.getElementById("ascii-hover");
+let asciiWrapper = document.getElementById("ascii-hover");
 
 isHovered = false;
 if(asciiWrapper != null) {

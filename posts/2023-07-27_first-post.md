@@ -15,13 +15,9 @@ uhh
 in the future, you can expect:
 
 * LinuxConvert devlogs (& a recap of what's happened so far this by this weekend)
-
 * random philosophical ramblings, probably
-
-* tutorials, because when i'm in a productive mood, the [Feynman technique](https://todoist.com/inspiration/feynman-technique) really works
-
+* tutorials on random things i've learned about (likely some CTF/RevEng stuff soon)
 * resources and explanations for things i've built
-
 * project postmortems
 
 ...
