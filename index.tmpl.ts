@@ -14,6 +14,7 @@ export default function ({ search }: PageData) {
           <a href="${post.data.url}">${post.data.title}</a> <span class="grey">↴</span>
       </h3>
       <h5>${post.data.date}</h5>
+      <h5>tags: ${post.data.tags}</h5>
       <p>${post.data.description}</p>
     </li>`
     ).join("")
