@@ -33,5 +33,7 @@ site.use(tailwindcss({
 }));
 site.use(postcss());
 
+site.copy("images");
+
 
 export default site;

@@ -248,3 +248,13 @@ header.content {
 }
 /* PROJECTS end */
 /* ========================================================= */
+
+/* POSTS begin */
+.unknown-text img {
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid var(--accent-color-darker);
+    border-radius: 2px;
+}
+
+/* POSTS end */
