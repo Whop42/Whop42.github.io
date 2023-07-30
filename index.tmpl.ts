@@ -3,8 +3,8 @@ import type { PageData } from "lume/core.ts";
 export const layout = "homepage.njk"
 
 export default function ({ search }: PageData) {
-  const posts = search.pages("type=post");
-
+  const posts = search.pages("type=post", "date=desc");
+  
   return `
     <ul>
       ${
